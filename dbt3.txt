@@ -1,0 +1,1158 @@
+Microsoft Windows [Version 10.0.19043.1081]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql.exe -u root -p
+Enter password: *******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 30
+Server version: 8.0.20 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> source E:/CDAC Data/DBT/day3/SampleScott_Schema.sql
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+mysql> create database SampleScott
+    -> create database SampleScott;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create database SampleScott' at line 2
+mysql> create database samplescott;
+Query OK, 1 row affected (1.35 sec)
+
+mysql> source E:/CDAC Data/DBT/day3/SampleScott_Schema.sql
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+ERROR 1046 (3D000): No database selected
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| humanresource      |
+| information_schema |
+| mysql              |
+| performance_schema |
+| person             |
+| samplescott        |
+| sys                |
++--------------------+
+7 rows in set (0.48 sec)
+
+mysql> use samplescott;
+Database changed
+mysql> source E:/CDAC Data/DBT/day3/SampleScott_Schema.sql
+Query OK, 0 rows affected (3.13 sec)
+
+Query OK, 1 row affected (0.42 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.22 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 0 rows affected (1.12 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 0 rows affected (1.50 sec)
+
+Query OK, 0 rows affected (1.28 sec)
+
+Query OK, 1 row affected (0.21 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.27 sec)
+
+Query OK, 0 rows affected (2.15 sec)
+
+Query OK, 1 row affected (0.31 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_samplescott |
++-----------------------+
+| bonus                 |
+| dept                  |
+| dummy                 |
+| emp                   |
+| salgrade              |
++-----------------------+
+5 rows in set (0.29 sec)
+
+mysql> select * from emp;
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+14 rows in set (0.03 sec)
+
+mysql> select * from salgrade;
++-------+-------+-------+
+| GRADE | LOSAL | HISAL |
++-------+-------+-------+
+|     1 |   700 |  1200 |
+|     2 |  1201 |  1400 |
+|     3 |  1401 |  2000 |
+|     4 |  2001 |  3000 |
+|     5 |  3001 |  9999 |
++-------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from bonus;
+Empty set (0.11 sec)
+
+mysql> select * from dept;
++--------+------------+----------+
+| DEPTNO | DNAME      | LOC      |
++--------+------------+----------+
+|     10 | ACCOUNTING | NEW YORK |
+|     20 | RESEARCH   | DALLAS   |
+|     30 | SALES      | CHICAGO  |
+|     40 | OPERATIONS | BOSTON   |
++--------+------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from dummy;
++-------+
+| DUMMY |
++-------+
+|     0 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select * from emp;
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME from emp;
++-------+--------+
+| EMPNO | ENAME  |
++-------+--------+
+|  7369 | SMITH  |
+|  7499 | ALLEN  |
+|  7521 | WARD   |
+|  7566 | JONES  |
+|  7654 | MARTIN |
+|  7698 | BLAKE  |
+|  7782 | CLARK  |
+|  7788 | SCOTT  |
+|  7839 | KING   |
+|  7844 | TURNER |
+|  7876 | ADAMS  |
+|  7900 | JAMES  |
+|  7902 | FORD   |
+|  7934 | MILLER |
++-------+--------+
+14 rows in set (0.00 sec)
+
+mysql> desc emp;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| EMPNO    | int unsigned | NO   |     | NULL    |       |
+| ENAME    | varchar(10)  | YES  |     | NULL    |       |
+| JOB      | varchar(9)   | YES  |     | NULL    |       |
+| MGR      | int unsigned | YES  |     | NULL    |       |
+| HIREDATE | date         | YES  |     | NULL    |       |
+| SAL      | float        | YES  |     | NULL    |       |
+| COMM     | float        | YES  |     | NULL    |       |
+| DEPTNO   | int unsigned | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.15 sec)
+
+mysql> desc salgrade;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| GRADE | int  | YES  |     | NULL    |       |
+| LOSAL | int  | YES  |     | NULL    |       |
+| HISAL | int  | YES  |     | NULL    |       |
++-------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc dept;
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| DEPTNO | int unsigned | YES  |     | NULL    |       |
+| DNAME  | varchar(14)  | YES  |     | NULL    |       |
+| LOC    | varchar(13)  | YES  |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select distinct job from emp;
++-----------+
+| job       |
++-----------+
+| CLERK     |
+| SALESMAN  |
+| MANAGER   |
+| ANALYST   |
+| PRESIDENT |
++-----------+
+5 rows in set (0.03 sec)
+
+mysql> select distinct job,deptno from emp;
++-----------+--------+
+| job       | deptno |
++-----------+--------+
+| CLERK     |     20 |
+| SALESMAN  |     30 |
+| MANAGER   |     20 |
+| MANAGER   |     30 |
+| MANAGER   |     10 |
+| ANALYST   |     20 |
+| PRESIDENT |     10 |
+| CLERK     |     30 |
+| CLERK     |     10 |
++-----------+--------+
+9 rows in set (0.00 sec)
+
+mysql> select distinct job from emp;
++-----------+
+| job       |
++-----------+
+| CLERK     |
+| SALESMAN  |
+| MANAGER   |
+| ANALYST   |
+| PRESIDENT |
++-----------+
+5 rows in set (0.00 sec)
+
+mysql> select CONCAT(SCOTT,"is earning"SAL,"dollars;"
+    -> select CONCAT(SCOTT,"is earning"SAL,"dollars";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select CONCAT(SCOTT,"is earning"SAL,"dollars"' at line 2
+mysql> select CONCAT(SCOTT,"is earning"800,"dollars";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '800,"dollars"' at line 1
+mysql> select CONCAT(ENAME=scott,"is earning"sal,"dollars";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select CONCAT(SCOTT,"is earning"SAL,"dollars)from emp;"
+    -> select CONCAT(SCOTT,"is earning"SAL,"dollars)from emp";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select CONCAT(SCOTT,"is earning"SAL,"dollars)from emp"' at line 2
+mysql> select CONCAT(ENAME,"is earning"SAL,"dollars)from emp";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select CONCAT(ENAME,"is earning"SAL,"dollars")from emp;
+ERROR 1583 (42000): Incorrect parameters in the call to native function 'concat'
+mysql> select CONCAT(ENAME,"is earning"SAL,"dollars")from emp where ENAME=cCott;
+ERROR 1583 (42000): Incorrect parameters in the call to native function 'concat'
+mysql> select CONCAT(ENAME,"is earning"SAL,"dollars")from emp where SAL=800;
+ERROR 1583 (42000): Incorrect parameters in the call to native function 'concat'
+mysql> select CONCAT(ENAME,"is earning",SAL,"dollars")from emp where SAL=800;
++------------------------------------------+
+| CONCAT(ENAME,"is earning",SAL,"dollars") |
++------------------------------------------+
+| SMITHis earning800dollars                |
++------------------------------------------+
+1 row in set (0.44 sec)
+
+mysql> select CONCAT(ENAME," is earning",SAL," dollars")from emp where SAL=800;
++--------------------------------------------+
+| CONCAT(ENAME," is earning",SAL," dollars") |
++--------------------------------------------+
+| SMITH is earning800 dollars                |
++--------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT(ENAME," is earning ",SAL," dollars")from emp where SAL=800;
++---------------------------------------------+
+| CONCAT(ENAME," is earning ",SAL," dollars") |
++---------------------------------------------+
+| SMITH is earning 800 dollars                |
++---------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select ENAME,JOB as designation from emp;
++--------+-------------+
+| ENAME  | designation |
++--------+-------------+
+| SMITH  | CLERK       |
+| ALLEN  | SALESMAN    |
+| WARD   | SALESMAN    |
+| JONES  | MANAGER     |
+| MARTIN | SALESMAN    |
+| BLAKE  | MANAGER     |
+| CLARK  | MANAGER     |
+| SCOTT  | ANALYST     |
+| KING   | PRESIDENT   |
+| TURNER | SALESMAN    |
+| ADAMS  | CLERK       |
+| JAMES  | CLERK       |
+| FORD   | ANALYST     |
+| MILLER | CLERK       |
++--------+-------------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,SAL as SAL+COMM+1000 from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+COMM+1000 from emp' at line 1
+mysql> select ENAME,SAL(SAL+COMM+1000) as ASAL;
+ERROR 1054 (42S22): Unknown column 'ENAME' in 'field list'
+mysql> select ENAME,SAL(SAL+COMM+1000) as ASAL from emp;
+ERROR 1305 (42000): FUNCTION samplescott.SAL does not exist
+mysql> select ENAME,SUM(SAL+COMM+1000) as ASAL from emp;
++-------+-------+
+| ENAME | ASAL  |
++-------+-------+
+| SMITH | 11800 |
++-------+-------+
+1 row in set (0.05 sec)
+
+mysql> select SUM(SAL+COMM+1000) as ASAL from emp;
++-------+
+| ASAL  |
++-------+
+| 11800 |
++-------+
+1 row in set (0.00 sec)
+
+mysql> select ENAME,SAL,COMM,(SAL+((SAL+COMM+1000)) as" ANUALSAL" from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as" ANUALSAL" from emp' at line 1
+mysql> select ENAME,SAL,COMM,(SAL+((SAL+COMM+1000)) as "ANUALSAL" from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as "ANUALSAL" from emp' at line 1
+mysql> elect empno,ename,sal,comm,(sal+nvl(comm,0)) as "Total_sal" from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'elect empno,ename,sal,comm,(sal+nvl(comm,0)) as "Total_sal" from emp' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM,(SAL+(SAL+1000(COMM,0)) as "ANUALSAL" from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(COMM,0)) as "ANUALSAL" from emp' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM,(SAL+(SAL+1000)) as "ANUALSAL" from emp;
++-------+--------+------+------+----------+
+| EMPNO | ENAME  | SAL  | COMM | ANUALSAL |
++-------+--------+------+------+----------+
+|  7369 | SMITH  |  800 | NULL |     2600 |
+|  7499 | ALLEN  | 1600 |  300 |     4200 |
+|  7521 | WARD   | 1250 |  500 |     3500 |
+|  7566 | JONES  | 2975 | NULL |     6950 |
+|  7654 | MARTIN | 1250 | 1400 |     3500 |
+|  7698 | BLAKE  | 2850 | NULL |     6700 |
+|  7782 | CLARK  | 2450 | NULL |     5900 |
+|  7788 | SCOTT  | 3000 | NULL |     7000 |
+|  7839 | KING   | 5000 | NULL |    11000 |
+|  7844 | TURNER | 1500 |    0 |     4000 |
+|  7876 | ADAMS  | 1100 | NULL |     3200 |
+|  7900 | JAMES  |  950 | NULL |     2900 |
+|  7902 | FORD   | 3000 | NULL |     7000 |
+|  7934 | MILLER | 1300 | NULL |     3600 |
++-------+--------+------+------+----------+
+14 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,SAL,COMM,(SAL+(SAL+1000+COMM)) as "ANUALSAL" from emp;
++-------+--------+------+------+----------+
+| EMPNO | ENAME  | SAL  | COMM | ANUALSAL |
++-------+--------+------+------+----------+
+|  7369 | SMITH  |  800 | NULL |     NULL |
+|  7499 | ALLEN  | 1600 |  300 |     4500 |
+|  7521 | WARD   | 1250 |  500 |     4000 |
+|  7566 | JONES  | 2975 | NULL |     NULL |
+|  7654 | MARTIN | 1250 | 1400 |     4900 |
+|  7698 | BLAKE  | 2850 | NULL |     NULL |
+|  7782 | CLARK  | 2450 | NULL |     NULL |
+|  7788 | SCOTT  | 3000 | NULL |     NULL |
+|  7839 | KING   | 5000 | NULL |     NULL |
+|  7844 | TURNER | 1500 |    0 |     4000 |
+|  7876 | ADAMS  | 1100 | NULL |     NULL |
+|  7900 | JAMES  |  950 | NULL |     NULL |
+|  7902 | FORD   | 3000 | NULL |     NULL |
+|  7934 | MILLER | 1300 | NULL |     NULL |
++-------+--------+------+------+----------+
+14 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,SAL,COMM,(SAL+1000+COMM) as "ANUALSAL" from emp;
++-------+--------+------+------+----------+
+| EMPNO | ENAME  | SAL  | COMM | ANUALSAL |
++-------+--------+------+------+----------+
+|  7369 | SMITH  |  800 | NULL |     NULL |
+|  7499 | ALLEN  | 1600 |  300 |     2900 |
+|  7521 | WARD   | 1250 |  500 |     2750 |
+|  7566 | JONES  | 2975 | NULL |     NULL |
+|  7654 | MARTIN | 1250 | 1400 |     3650 |
+|  7698 | BLAKE  | 2850 | NULL |     NULL |
+|  7782 | CLARK  | 2450 | NULL |     NULL |
+|  7788 | SCOTT  | 3000 | NULL |     NULL |
+|  7839 | KING   | 5000 | NULL |     NULL |
+|  7844 | TURNER | 1500 |    0 |     2500 |
+|  7876 | ADAMS  | 1100 | NULL |     NULL |
+|  7900 | JAMES  |  950 | NULL |     NULL |
+|  7902 | FORD   | 3000 | NULL |     NULL |
+|  7934 | MILLER | 1300 | NULL |     NULL |
++-------+--------+------+------+----------+
+14 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,SAL,COMM,(SAL+1000+COMM)(NULL,0) as "ANUALSAL" from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(NULL,0) as "ANUALSAL" from emp' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM,(SAL+1000+COMM(NULL,0)) as "ANUALSAL" from emp;
+ERROR 1305 (42000): FUNCTION samplescott.COMM does not exist
+mysql> select CONCAT(ENAME," is earning ",SAL," dollars")from emp;
++---------------------------------------------+
+| CONCAT(ENAME," is earning ",SAL," dollars") |
++---------------------------------------------+
+| SMITH is earning 800 dollars                |
+| ALLEN is earning 1600 dollars               |
+| WARD is earning 1250 dollars                |
+| JONES is earning 2975 dollars               |
+| MARTIN is earning 1250 dollars              |
+| BLAKE is earning 2850 dollars               |
+| CLARK is earning 2450 dollars               |
+| SCOTT is earning 3000 dollars               |
+| KING is earning 5000 dollars                |
+| TURNER is earning 1500 dollars              |
+| ADAMS is earning 1100 dollars               |
+| JAMES is earning 950 dollars                |
+| FORD is earning 3000 dollars                |
+| MILLER is earning 1300 dollars              |
++---------------------------------------------+
+14 rows in set (0.00 sec)
+
+mysql> select distint EMPNO as manager number from emp
+    -> select distint EMPNO as manager number from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as manager number from emp
+select distint EMPNO as manager number from emp' at line 1
+mysql> select distinct EMPNO as manager number from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'number from emp' at line 1
+mysql> select distinct EMPNO as "MANAGERNO" from emp;
++-----------+
+| MANAGERNO |
++-----------+
+|      7369 |
+|      7499 |
+|      7521 |
+|      7566 |
+|      7654 |
+|      7698 |
+|      7782 |
+|      7788 |
+|      7839 |
+|      7844 |
+|      7876 |
+|      7900 |
+|      7902 |
+|      7934 |
++-----------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,SAL,COMM, ISNULL(COMM,1500) from emp;
+ERROR 1582 (42000): Incorrect parameter count in the call to native function 'ISNULL'
+mysql> select ENAME,SAL,COMM ISNULL(COMM,1500) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(COMM,1500) from emp' at line 1
+mysql> select ENAME,SAL,ISNULL(COMM,1500) from emp;
+ERROR 1582 (42000): Incorrect parameter count in the call to native function 'ISNULL'
+mysql> select ENAME,SAL,COMM IFNULL(COMM,1500) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(COMM,1500) from emp' at line 1
+mysql> select ENAME,SAL,COMM IF NULL(COMM,1500) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NULL(COMM,1500) from emp' at line 1
+mysql> select ENAME,SAL,COMM NULLIF(COMM,1500) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(COMM,1500) from emp' at line 1
+mysql> select ENAME,SAL,COMM, NULLIF(COMM,1500) from emp;
++--------+------+------+-------------------+
+| ENAME  | SAL  | COMM | NULLIF(COMM,1500) |
++--------+------+------+-------------------+
+| SMITH  |  800 | NULL |              NULL |
+| ALLEN  | 1600 |  300 |               300 |
+| WARD   | 1250 |  500 |               500 |
+| JONES  | 2975 | NULL |              NULL |
+| MARTIN | 1250 | 1400 |              1400 |
+| BLAKE  | 2850 | NULL |              NULL |
+| CLARK  | 2450 | NULL |              NULL |
+| SCOTT  | 3000 | NULL |              NULL |
+| KING   | 5000 | NULL |              NULL |
+| TURNER | 1500 |    0 |                 0 |
+| ADAMS  | 1100 | NULL |              NULL |
+| JAMES  |  950 | NULL |              NULL |
+| FORD   | 3000 | NULL |              NULL |
+| MILLER | 1300 | NULL |              NULL |
++--------+------+------+-------------------+
+14 rows in set (0.04 sec)
+
+mysql> select ENAME,SAL,COMM, IFNULL(COMM,1500) from emp;
++--------+------+------+-------------------+
+| ENAME  | SAL  | COMM | IFNULL(COMM,1500) |
++--------+------+------+-------------------+
+| SMITH  |  800 | NULL |              1500 |
+| ALLEN  | 1600 |  300 |               300 |
+| WARD   | 1250 |  500 |               500 |
+| JONES  | 2975 | NULL |              1500 |
+| MARTIN | 1250 | 1400 |              1400 |
+| BLAKE  | 2850 | NULL |              1500 |
+| CLARK  | 2450 | NULL |              1500 |
+| SCOTT  | 3000 | NULL |              1500 |
+| KING   | 5000 | NULL |              1500 |
+| TURNER | 1500 |    0 |                 0 |
+| ADAMS  | 1100 | NULL |              1500 |
+| JAMES  |  950 | NULL |              1500 |
+| FORD   | 3000 | NULL |              1500 |
+| MILLER | 1300 | NULL |              1500 |
++--------+------+------+-------------------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,SAL where job=clerk or SALESMAN from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from emp' at line 1
+mysql> select ENAME,SAL from emp where job='clerk'or job=salesman;
+ERROR 1054 (42S22): Unknown column 'salesman' in 'where clause'
+mysql> select ENAME,SAL from emp where job='clerk'or job='salesman';
++--------+------+
+| ENAME  | SAL  |
++--------+------+
+| SMITH  |  800 |
+| ALLEN  | 1600 |
+| WARD   | 1250 |
+| MARTIN | 1250 |
+| TURNER | 1500 |
+| ADAMS  | 1100 |
+| JAMES  |  950 |
+| MILLER | 1300 |
++--------+------+
+8 rows in set (0.01 sec)
+
+mysql> select ename from emp where debtno=10;
+ERROR 1054 (42S22): Unknown column 'debtno' in 'where clause'
+mysql> select ename from emp where deptno=10;
++--------+
+| ename  |
++--------+
+| CLARK  |
+| KING   |
+| MILLER |
++--------+
+3 rows in set (0.00 sec)
+
+mysql> select ENAME from emp where hiredate>year1981;
+ERROR 1054 (42S22): Unknown column 'year1981' in 'where clause'
+mysql> select ENAME from emp where hiredate >1981;
++--------+
+| ENAME  |
++--------+
+| SMITH  |
+| ALLEN  |
+| WARD   |
+| JONES  |
+| MARTIN |
+| BLAKE  |
+| CLARK  |
+| SCOTT  |
+| KING   |
+| TURNER |
+| ADAMS  |
+| JAMES  |
+| FORD   |
+| MILLER |
++--------+
+14 rows in set, 1 warning (0.05 sec)
+
+mysql> select * from emp;
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME from emp where hiredate >19810101;
++--------+
+| ENAME  |
++--------+
+| ALLEN  |
+| WARD   |
+| JONES  |
+| MARTIN |
+| BLAKE  |
+| CLARK  |
+| SCOTT  |
+| KING   |
+| TURNER |
+| ADAMS  |
+| JAMES  |
+| FORD   |
+| MILLER |
++--------+
+13 rows in set (0.03 sec)
+
+mysql> select ENAME from emp where hiredate=1981;
+Empty set, 1 warning (0.00 sec)
+
+mysql> select ENAME from emp where hiredate=year(1981);
+Empty set, 2 warnings (0.05 sec)
+
+mysql> select ENAME from emp where to_char(hiredate,'YYYY')=1981;
+ERROR 1305 (42000): FUNCTION samplescott.to_char does not exist
+mysql> select ENAME from emp where char(hiredate,'YYYY')=1981;
+Empty set, 14 warnings (0.05 sec)
+
+mysql> select ENAME from emp where year(hiredate)=1981;
++--------+
+| ENAME  |
++--------+
+| ALLEN  |
+| WARD   |
+| JONES  |
+| MARTIN |
+| BLAKE  |
+| CLARK  |
+| KING   |
+| TURNER |
+| JAMES  |
+| FORD   |
++--------+
+10 rows in set (0.00 sec)
+
+mysql> select ENAME from emp where job=clerk and SAL>1000;
+ERROR 1054 (42S22): Unknown column 'clerk' in 'where clause'
+mysql> select ENAME from emp where job='clerk' and SAL>1000;
++--------+
+| ENAME  |
++--------+
+| ADAMS  |
+| MILLER |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_samplescott |
++-----------------------+
+| bonus                 |
+| dept                  |
+| dummy                 |
+| emp                   |
+| salgrade              |
++-----------------------+
+5 rows in set (0.08 sec)
+
+mysql> select * from dept;
++--------+------------+----------+
+| DEPTNO | DNAME      | LOC      |
++--------+------------+----------+
+|     10 | ACCOUNTING | NEW YORK |
+|     20 | RESEARCH   | DALLAS   |
+|     30 | SALES      | CHICAGO  |
+|     40 | OPERATIONS | BOSTON   |
++--------+------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,JOB,SAL from emp where MGR is not null;
++-------+--------+----------+------+
+| EMPNO | ENAME  | JOB      | SAL  |
++-------+--------+----------+------+
+|  7369 | SMITH  | CLERK    |  800 |
+|  7499 | ALLEN  | SALESMAN | 1600 |
+|  7521 | WARD   | SALESMAN | 1250 |
+|  7566 | JONES  | MANAGER  | 2975 |
+|  7654 | MARTIN | SALESMAN | 1250 |
+|  7698 | BLAKE  | MANAGER  | 2850 |
+|  7782 | CLARK  | MANAGER  | 2450 |
+|  7788 | SCOTT  | ANALYST  | 3000 |
+|  7844 | TURNER | SALESMAN | 1500 |
+|  7876 | ADAMS  | CLERK    | 1100 |
+|  7900 | JAMES  | CLERK    |  950 |
+|  7902 | FORD   | ANALYST  | 3000 |
+|  7934 | MILLER | CLERK    | 1300 |
++-------+--------+----------+------+
+13 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,JOB,SAL from emp where MGR is null;
++-------+-------+-----------+------+
+| EMPNO | ENAME | JOB       | SAL  |
++-------+-------+-----------+------+
+|  7839 | KING  | PRESIDENT | 5000 |
++-------+-------+-----------+------+
+1 row in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,JOB,SAL from emp where COMM is null;
++-------+--------+-----------+------+
+| EMPNO | ENAME  | JOB       | SAL  |
++-------+--------+-----------+------+
+|  7369 | SMITH  | CLERK     |  800 |
+|  7566 | JONES  | MANAGER   | 2975 |
+|  7698 | BLAKE  | MANAGER   | 2850 |
+|  7782 | CLARK  | MANAGER   | 2450 |
+|  7788 | SCOTT  | ANALYST   | 3000 |
+|  7839 | KING   | PRESIDENT | 5000 |
+|  7876 | ADAMS  | CLERK     | 1100 |
+|  7900 | JAMES  | CLERK     |  950 |
+|  7902 | FORD   | ANALYST   | 3000 |
+|  7934 | MILLER | CLERK     | 1300 |
++-------+--------+-----------+------+
+10 rows in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,SAL,COMM from emp where SAL+COMM >2000;
++-------+--------+------+------+
+| EMPNO | ENAME  | SAL  | COMM |
++-------+--------+------+------+
+|  7654 | MARTIN | 1250 | 1400 |
++-------+--------+------+------+
+1 row in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,SAL,COMM from emp where SAL+COMM(COMM,0) >2000;
+ERROR 1305 (42000): FUNCTION samplescott.COMM does not exist
+mysql> select EMPNO,ENAME,SAL,COMM from emp where SAL+COMM,IFNULL(COMM,0) >2000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',IFNULL(COMM,0) >2000' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM from emp where SAL+COMM,NULLIF(COMM,0) >2000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',NULLIF(COMM,0) >2000' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM from emp where SAL+COMM NULLIF(COMM,0) >2000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULLIF(COMM,0) >2000' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM from emp where (SAL+COMM NULLIF(COMM,0)) >2000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULLIF(COMM,0)) >2000' at line 1
+mysql> select EMPNO,ENAME,SAL,COMM from emp where (SAL+COMM,NULLIF(COMM,0)) >2000;
+ERROR 1241 (21000): Operand should contain 2 column(s)
+mysql> select EMPNO,ENAME,SAL,COMM from emp where (SAL+NULLIF(COMM,0)) >2000;
++-------+--------+------+------+
+| EMPNO | ENAME  | SAL  | COMM |
++-------+--------+------+------+
+|  7654 | MARTIN | 1250 | 1400 |
++-------+--------+------+------+
+1 row in set (0.00 sec)
+
+mysql> select EMPNO,ENAME,SAL,COMM from emp where (SAL+COMM,IFNULL(COMM,0)) >2000;
+ERROR 1241 (21000): Operand should contain 2 column(s)
+mysql> select EMPNO,ENAME,SAL,COMM from emp where (SAL+IFNULL(COMM,0)) >2000;
++-------+--------+------+------+
+| EMPNO | ENAME  | SAL  | COMM |
++-------+--------+------+------+
+|  7566 | JONES  | 2975 | NULL |
+|  7654 | MARTIN | 1250 | 1400 |
+|  7698 | BLAKE  | 2850 | NULL |
+|  7782 | CLARK  | 2450 | NULL |
+|  7788 | SCOTT  | 3000 | NULL |
+|  7839 | KING   | 5000 | NULL |
+|  7902 | FORD   | 3000 | NULL |
++-------+--------+------+------+
+7 rows in set (0.00 sec)
+
+mysql> select * from EMP WHERE JOB!='Manager';
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+11 rows in set (0.00 sec)
+
+mysql> select * from emp where job='SALESMAN' and dept=10;
+ERROR 1054 (42S22): Unknown column 'dept' in 'where clause'
+mysql> select ENAME from emp where job='SALESMAN' and deptno in(10,30);
++--------+
+| ENAME  |
++--------+
+| ALLEN  |
+| WARD   |
+| MARTIN |
+| TURNER |
++--------+
+4 rows in set (0.06 sec)
+
+mysql> select ENAM from emp where JOB='SALESMAN' and deptno=30 and COMM=!null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=!null' at line 1
+mysql> select ENAM from emp where JOB='SALESMAN' and deptno=30 and COMM!=null;
+ERROR 1054 (42S22): Unknown column 'ENAM' in 'field list'
+mysql> select ENAMe from emp where JOB='SALESMAN' and deptno=30 and COMM!=null;
+Empty set (0.00 sec)
+
+mysql> select ENAMe from emp where JOB='SALESMAN' and deptno=30 and COMM=!null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=!null' at line 1
+mysql> select ENAME from emp where JOB='SALESMAN' and deptno=30 and COMM=!NULL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=!NULL' at line 1
+mysql> select ENAME from emp where JOB='SALESMAN' and deptno=30 and COMM is not null;
++--------+
+| ENAME  |
++--------+
+| ALLEN  |
+| WARD   |
+| MARTIN |
+| TURNER |
++--------+
+4 rows in set (0.00 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_samplescott |
++-----------------------+
+| bonus                 |
+| dept                  |
+| dummy                 |
+| emp                   |
+| salgrade              |
++-----------------------+
+5 rows in set (0.05 sec)
+
+mysql> select * from emp;
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select * from emp where deptno=10;
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select * from emp where deptno not 30;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '30' at line 1
+mysql> select * from emp where deptno!=30;
++-------+--------+-----------+------+------------+------+------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
++-------+--------+-----------+------+------------+------+------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |
++-------+--------+-----------+------+------------+------+------+--------+
+8 rows in set (0.00 sec)
+
+mysql> select count from emp;
+ERROR 1054 (42S22): Unknown column 'count' in 'field list'
+mysql> select * count from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'count from emp' at line 1
+mysql> select count(ENAME) from emp;
++--------------+
+| count(ENAME) |
++--------------+
+|           14 |
++--------------+
+1 row in set (0.02 sec)
+
+mysql> select ENAME from emp  ORDER by SAL desc;
++--------+
+| ENAME  |
++--------+
+| KING   |
+| SCOTT  |
+| FORD   |
+| JONES  |
+| BLAKE  |
+| CLARK  |
+| ALLEN  |
+| TURNER |
+| MILLER |
+| WARD   |
+| MARTIN |
+| ADAMS  |
+| JAMES  |
+| SMITH  |
++--------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,sal from emp  ORDER by SAL desc;
++--------+------+
+| ENAME  | sal  |
++--------+------+
+| KING   | 5000 |
+| SCOTT  | 3000 |
+| FORD   | 3000 |
+| JONES  | 2975 |
+| BLAKE  | 2850 |
+| CLARK  | 2450 |
+| ALLEN  | 1600 |
+| TURNER | 1500 |
+| MILLER | 1300 |
+| WARD   | 1250 |
+| MARTIN | 1250 |
+| ADAMS  | 1100 |
+| JAMES  |  950 |
+| SMITH  |  800 |
++--------+------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,sal from emp  ORDER by SAL desc AND deptno Asc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND deptno Asc' at line 1
+mysql> select ENAME,sal from emp  ORDER by deptno;
++--------+------+
+| ENAME  | sal  |
++--------+------+
+| CLARK  | 2450 |
+| KING   | 5000 |
+| MILLER | 1300 |
+| SMITH  |  800 |
+| JONES  | 2975 |
+| SCOTT  | 3000 |
+| ADAMS  | 1100 |
+| FORD   | 3000 |
+| ALLEN  | 1600 |
+| WARD   | 1250 |
+| MARTIN | 1250 |
+| BLAKE  | 2850 |
+| TURNER | 1500 |
+| JAMES  |  950 |
++--------+------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,deptno from emp  ORDER by deptno;
++--------+--------+
+| ENAME  | deptno |
++--------+--------+
+| CLARK  |     10 |
+| KING   |     10 |
+| MILLER |     10 |
+| SMITH  |     20 |
+| JONES  |     20 |
+| SCOTT  |     20 |
+| ADAMS  |     20 |
+| FORD   |     20 |
+| ALLEN  |     30 |
+| WARD   |     30 |
+| MARTIN |     30 |
+| BLAKE  |     30 |
+| TURNER |     30 |
+| JAMES  |     30 |
++--------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,deptno from emp  ORDER by deptno and orber by SAL DECS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by SAL DECS' at line 1
+mysql> select ENAME,deptno from emp  ORDER by deptno and ORDER by SAL DECS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER by SAL DECS' at line 1
+mysql> select ENAME,deptno from emp  ORDER by deptno & ORDER by SAL DECS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER by SAL DECS' at line 1
+mysql> select ENAME,deptno from emp  ORDER by deptno and SAL DECS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DECS' at line 1
+mysql> select ENAME,deptno from emp ORDER by deptno and SAL DECS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DECS' at line 1
+mysql> select ENAME,deptno from emp ORDER by deptno;
++--------+--------+
+| ENAME  | deptno |
++--------+--------+
+| CLARK  |     10 |
+| KING   |     10 |
+| MILLER |     10 |
+| SMITH  |     20 |
+| JONES  |     20 |
+| SCOTT  |     20 |
+| ADAMS  |     20 |
+| FORD   |     20 |
+| ALLEN  |     30 |
+| WARD   |     30 |
+| MARTIN |     30 |
+| BLAKE  |     30 |
+| TURNER |     30 |
+| JAMES  |     30 |
++--------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,deptno from emp ORDER by deptno,SAL DECS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DECS' at line 1
+mysql> select ENAME,deptno from emp ORDER by deptno,SAL DEsc;
++--------+--------+
+| ENAME  | deptno |
++--------+--------+
+| KING   |     10 |
+| CLARK  |     10 |
+| MILLER |     10 |
+| SCOTT  |     20 |
+| FORD   |     20 |
+| JONES  |     20 |
+| ADAMS  |     20 |
+| SMITH  |     20 |
+| BLAKE  |     30 |
+| ALLEN  |     30 |
+| TURNER |     30 |
+| WARD   |     30 |
+| MARTIN |     30 |
+| JAMES  |     30 |
++--------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,deptno,sal from emp ORDER by deptno,SAL desc;
++--------+--------+------+
+| ENAME  | deptno | sal  |
++--------+--------+------+
+| KING   |     10 | 5000 |
+| CLARK  |     10 | 2450 |
+| MILLER |     10 | 1300 |
+| SCOTT  |     20 | 3000 |
+| FORD   |     20 | 3000 |
+| JONES  |     20 | 2975 |
+| ADAMS  |     20 | 1100 |
+| SMITH  |     20 |  800 |
+| BLAKE  |     30 | 2850 |
+| ALLEN  |     30 | 1600 |
+| TURNER |     30 | 1500 |
+| WARD   |     30 | 1250 |
+| MARTIN |     30 | 1250 |
+| JAMES  |     30 |  950 |
++--------+--------+------+
+14 rows in set (0.00 sec)
+
+mysql> select ENAME,DEPTNO,SAL from emp ORDER by DEPTNO,SAL desc;
++--------+--------+------+
+| ENAME  | DEPTNO | SAL  |
++--------+--------+------+
+| KING   |     10 | 5000 |
+| CLARK  |     10 | 2450 |
+| MILLER |     10 | 1300 |
+| SCOTT  |     20 | 3000 |
+| FORD   |     20 | 3000 |
+| JONES  |     20 | 2975 |
+| ADAMS  |     20 | 1100 |
+| SMITH  |     20 |  800 |
+| BLAKE  |     30 | 2850 |
+| ALLEN  |     30 | 1600 |
+| TURNER |     30 | 1500 |
+| WARD   |     30 | 1250 |
+| MARTIN |     30 | 1250 |
+| JAMES  |     30 |  950 |
++--------+--------+------+
+14 rows in set (0.00 sec)
+
+mysql>
