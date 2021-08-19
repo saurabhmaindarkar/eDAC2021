@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Sphere {
+	double a, Volume;
+	
+	public double VolumeOfSphere (double radius) {
+		Volume=(4.0 / 3)*Math.PI*radius*radius*radius;
+		return Volume;
+	}
+	
+	public double SurfaceAreaOfSphere (double radius) {
+		a =4*Math.PI*radius*radius;
+		return a;
+
+}
+	private static Scanner sc;
+	public static void main(String[] args) {
+		double radius, volume,surfaceArea;
+		sc = new Scanner(System.in);
+		System.out.println("\n Enter radius of a Sphere : ");
+		radius = sc.nextDouble();
+		Sphere vs = new Sphere();
+		volume = vs.VolumeOfSphere(radius);
+		surfaceArea = vs.SurfaceAreaOfSphere(radius);
+		System.out.format("\n surface area of a sphere =", surfaceArea);
+		System.out.format("\n volume of a sphere =", volume);
+	}
+}
